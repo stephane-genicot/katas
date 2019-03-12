@@ -8,11 +8,11 @@ Prior to 1582, the Julian Calendar was in wide use and defined leap years as eve
 
 The Gregorian Calendar is quite accurate, but could be made more accurate by adding an additional rule that eliminates years divisible by 4000 as leap years. But I guess we’ll cross that bridge when we come to it. Consider adding this rule as a second story as an extension to the exercise.
 
-User Story:
+**User Story:**
 
 As a user, I want to know if a year is a leap year, So that I can plan for an extra day on February 29th during those years.
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 1. All years divisible by 400 ARE leap years (so, for example, 2000 was indeed a leap year),
 2. All years divisible by 100 but not by 400 are NOT leap years (so, for example, 1700, 1800, and 1900 were NOT leap years, NOR will 2100 be a leap year),
