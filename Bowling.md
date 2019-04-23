@@ -2,6 +2,8 @@
 
 ##About this Kata
 
+This short and simple Kata should be performed using Test Driven Development (TDD).
+
 This description is based on that at Adventures in C#: The Bowling Game
 
 Create a program, which, given a valid sequence of rolls for one line of American Ten-Pin Bowling, produces the total score for the game. Here are some things that the program will not do:
@@ -41,5 +43,8 @@ What makes this game interesting to score is the lookahead in the scoring for st
 Write some thoughts here about what you have learnt from this Kata. You don’t have to post all the code of your solution - I think the solution in itself is less interesting than the path you took to get there and what decisions you made. Just seeing the code won’t necessarily help me to reproduce it for myself. So in this section various people might go through the main parts of the problem and how they tackled them, what design ideas were discarded, and which order the test cases were implemented in.
 * One interesting point to note is that without counting frames in any way (although I don’t think this was intended as a ‘hard’ requirement for the initial Kata completion), finding an elegant way to identify the end of the game/last “real” frame becomes difficult (ie: assuming there are final ‘bonus’ rolls included in a given test case). Update : After trying various things, including writing out a logic matrix for possible end-of-game combinations, I’m not sure it’s possible to detect whether a final ‘throw’ counts as bonus-only or as part of an actual frame, unless you’re counting frames. – RudyXDesjardins
 
+The complete description can be found here : http://codingdojo.org/kata/Bowling/
+
 
 **IMPORTANT:**  Implement the requirements focusing on **writing the best code** you can produce.
+

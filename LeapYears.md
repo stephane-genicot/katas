@@ -19,4 +19,6 @@ As a user, I want to know if a year is a leap year, So that I can plan for an ex
 3. All years divisible by 4 but not by 100 ARE leap years (e.g., 2008, 2012, 2016),
 4. All years not divisible by 4 are NOT leap years (e.g. 2017, 2018, 2019).
 
+The complete description can be found here : http://codingdojo.org/kata/LeapYears/
+
 **IMPORTANT:**  Implement the requirements focusing on **writing the best code** you can produce.
