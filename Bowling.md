@@ -1,14 +1,14 @@
-#Bowling
+# Bowling
 
-##About this Kata
+## About this Kata
 
-This short and simple Kata should be performed using Test Driven Development (TDD).
+This short and simple Kata should be performed using **Test Driven Development** (TDD).
 
 This description is based on that at Adventures in C#: The Bowling Game
 
 Create a program, which, given a valid sequence of rolls for one line of American Ten-Pin Bowling, produces the total score for the game. Here are some things that the program will not do:
 
-###Problem Description
+### Problem Description
 * We will not check for valid rolls.
 * We will not check for correct number of rolls and frames.
 * We will not provide scores for intermediate frames.
@@ -26,11 +26,11 @@ We can briefly summarize the scoring for this form of bowling:
 
 More info on the rules at : http://www.topendsports.com/sport/tenpin/scoring.htm
 
-###Clues
+### Clues
 
 What makes this game interesting to score is the lookahead in the scoring for strike and spare. At the time we throw a strike or spare, we cannot calculate the frame score: we have to wait one or two frames to find out what the bonus is.
 
-###Suggested Test Cases
+### Suggested Test Cases
 
 (When scoring “X” indicates a strike, “/” indicates a spare, “-” indicates a miss)
 
@@ -38,10 +38,12 @@ What makes this game interesting to score is the lookahead in the scoring for st
 * 9- 9- 9- 9- 9- 9- 9- 9- 9- 9- (20 rolls: 10 pairs of 9 and miss) = 10 frames * 9 points = 90
 * 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5 (21 rolls: 10 pairs of 5 and spare, with a final 5) = 10 frames * 15 points = 150
 
-###Comments from those who have mastered this Kata
+### Comments from those who have mastered this Kata
 
 Write some thoughts here about what you have learnt from this Kata. You don’t have to post all the code of your solution - I think the solution in itself is less interesting than the path you took to get there and what decisions you made. Just seeing the code won’t necessarily help me to reproduce it for myself. So in this section various people might go through the main parts of the problem and how they tackled them, what design ideas were discarded, and which order the test cases were implemented in.
 * One interesting point to note is that without counting frames in any way (although I don’t think this was intended as a ‘hard’ requirement for the initial Kata completion), finding an elegant way to identify the end of the game/last “real” frame becomes difficult (ie: assuming there are final ‘bonus’ rolls included in a given test case). Update : After trying various things, including writing out a logic matrix for possible end-of-game combinations, I’m not sure it’s possible to detect whether a final ‘throw’ counts as bonus-only or as part of an actual frame, unless you’re counting frames. – RudyXDesjardins
+
+### Useful link
 
 The complete description can be found here : http://codingdojo.org/kata/Bowling/
 

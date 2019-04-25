@@ -2,9 +2,11 @@
 
 ## About this Kata
 
-This short and simple Kata should be performed using Test Driven Development (TDD).
+This short and simple Kata should be performed using **Test Driven Development** (TDD).
 
 It is about implementing a simple tennis game. It is inspired by Wii tennis, where they have simplified tennis, so each set is one game.
+
+## Rules
 
 The scoring system is rather simple:
 
@@ -30,6 +32,7 @@ The scoring system is rather simple:
 
 4. If at least three points have been scored by each side and a player has one more point than his opponent, the score of the game is “advantage” for the player in the lead.
 
+## Useful link
 
 The complete description can be found here : http://codingdojo.org/kata/Tennis/
 
