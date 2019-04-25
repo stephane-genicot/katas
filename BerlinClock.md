@@ -2,7 +2,9 @@
 
 ## About this Kata
 
-This short and simple Kata should be performed using Test Driven Development (TDD).
+This short and simple Kata should be performed using **Test Driven Development** (TDD).
+
+## Rules
 
 The Berlin Clock (Mengenlehreclock or Berlin Uhr) is a clock that tells the time using a series of illuminated coloured blocks, as you can see in the picture for this project.
 
