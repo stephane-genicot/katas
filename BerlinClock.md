@@ -1,5 +1,7 @@
 # Berlin Clock
 
+![Alt text](images/Kata_BerlinClock.png?raw=true "Berlin Clock")
+
 ## About this Kata
 
 This short and simple Kata should be performed using **Test Driven Development** (TDD).

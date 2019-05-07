@@ -1,4 +1,6 @@
-# KataTennis
+# Tennis Game
+
+![Alt text](images/Kata_Tennis.jpeg?raw=true "Tennis ")
 
 ## About this Kata
 

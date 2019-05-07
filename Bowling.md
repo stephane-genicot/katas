@@ -1,5 +1,7 @@
 # Bowling
 
+![Alt text](images/Kata_BowlingGame.jpg?raw=true "Bowling Game")
+
 ## About this Kata
 
 This short and simple Kata should be performed using **Test Driven Development** (TDD).

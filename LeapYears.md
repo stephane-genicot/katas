@@ -1,5 +1,7 @@
 # Leap Years
 
+![Alt text](images/Kata_LeapYears.png?raw=true "Leap Years")
+
 ## About this Kata
 
 This short and simple Kata should be performed using **Test Driven Development** (TDD).
