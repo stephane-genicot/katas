@@ -20,6 +20,6 @@ The rules are described below :
 
 ## Useful link
 
-The complete description can be found here : https://github.com/WeSquad/tic-tac-toe-react
+Clean Code - TDD : https://cleancoders.com/episode/clean-code-episode-6-p1
 
 **IMPORTANT:**  Implement the requirements focusing on **writing the best code** you can produce.
