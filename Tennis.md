@@ -38,4 +38,6 @@ The scoring system is rather simple:
 
 The complete description can be found here : http://codingdojo.org/kata/Tennis/
 
+Clean Code - TDD : https://cleancoders.com/episode/clean-code-episode-6-p1
+
 **IMPORTANT:**  Implement the requirements focusing on **writing the best code** you can produce.
