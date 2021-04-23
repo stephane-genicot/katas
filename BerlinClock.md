@@ -19,5 +19,6 @@ The final two rows represent the minutes. The upper row represents 5 minute bloc
 ## Useful links
 The complete description can be found here : http://agilekatas.co.uk/katas/BerlinClock-Kata
 
+Clean Code - TDD : https://cleancoders.com/episode/clean-code-episode-6-p1
 
 **IMPORTANT:**  Implement the requirements focusing on **writing the best code** you can produce.
