@@ -21,7 +21,7 @@ There is a series of books about software development that have been read by a l
 
 The rules are described below :
 
-One copy of any of the five books costs 50 EUR.
+One copy of the five books costs 50 EUR.
 - If, however, you buy two different books from the series, you get a 7% discount on those two books.
 - If you buy 3 different books, you get a 15% discount.
 - With 4 different books, you get a 25% discount.
@@ -45,10 +45,10 @@ Answer :
 
 = 150 EUR + 150 EUR
 
-= 300 EUR (kownledge is priceless but has a cost)
+= 300 EUR (knowledge is priceless but has a cost)
   
 ## Useful link
 
-The complete description can be found here : https://github.com/WeSquad/tic-tac-toe-react
+Clean Code - TDD : https://cleancoders.com/episode/clean-code-episode-6-p1
 
 **IMPORTANT:**  Implement the requirements focusing on **writing the best code** you can produce.
