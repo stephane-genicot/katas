@@ -3,8 +3,8 @@
 ![Alt text](images/Kata_DevelopmentBooks_CleanCode.png?raw=true "Software Development Books")
 ![Alt text](images/Kata_DevelopmentBooks_CleanCoder.png?raw=true "Software Development Books")
 ![Alt text](images/Kata_DevelopmentBooks_CleanArchitecture.jpeg?raw=true "Software Development Books")
-![Alt text](images/Kata_DevelopmentBooks_TDD.png?raw=true "Software Development Books")
-![Alt text](images/Kata_DevelopmentBooks_Refactoring.png?raw=true "Software Development Books")
+![Alt text](images/Kata_DevelopmentBooks_TDD.jpeg?raw=true "Software Development Books")
+![Alt text](images/Kata_DevelopmentBooks_Refactoring.jpeg?raw=true "Software Development Books")
 
 ## About this Kata
 
