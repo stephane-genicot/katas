@@ -28,7 +28,7 @@ One copy of the five books costs 50 EUR.
 - If you go for the whole hog, and buy all 5, you get a huge 50% discount.
 - Note that if you buy, say, 4 books, of which 3 are different titles, you get a 15% discount on the 3 that form part of a set, but the 4th book still costs 50 EUR.
 
-Developers seeking to deliver quality products are queueing up with shopping baskets overflowing with these books. Your mission is to write a piece of code to calculate the price of any conceivable shopping basket, giving as big a discount as possible.
+Developers seeking to deliver quality products are queueing up with shopping baskets overflowing with these books. Your mission is to write a piece of code to calculate the price of any conceivable shopping basket.
 
 For example, how much does this basket of books cost?
 - 2 copies of the “Clean Code” book
