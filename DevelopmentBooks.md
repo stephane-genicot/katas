@@ -39,9 +39,9 @@ For example, how much does this basket of books cost?
 
 Answer :
 
-(4 * 50 EUR) - 25% [first book, second book, third book, fourth book]
+(4 * 50 EUR) - 20% [first book, second book, third book, fourth book]
 
-(4 * 50 EUR) - 25% [first book, second book, third book, fifth book]
+(4 * 50 EUR) - 20% [first book, second book, third book, fifth book]
 
 = 150 EUR + 150 EUR
 
