@@ -43,9 +43,9 @@ Answer :
 
 (4 * 50 EUR) - 20% [first book, second book, third book, fifth book]
 
-= 150 EUR + 150 EUR
+= 160 EUR + 160 EUR
 
-= 300 EUR (knowledge is priceless but has a cost)
+= 320 EUR (knowledge is priceless but has a cost)
   
 ## Useful link
 
