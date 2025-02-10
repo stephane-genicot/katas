@@ -1,0 +1,87 @@
+package com.bnpp.kata;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
+
+@TestInstance(Lifecycle.PER_CLASS)
+public class DevelopmentBooksTest {
+	
+	private DevelopmentBooks developmentBooks;
+	
+	@BeforeAll
+	public void setup() {
+		developmentBooks = new DevelopmentBooks();
+	}
+
+	@Test
+	public void priceForOneBook() {
+		Map<String, Integer> booksAndQuans = new HashMap<>();
+		booksAndQuans.put("Clean Code (Robert Martin, 2008)", 1);
+		assertEquals(50, developmentBooks.finalPrice(booksAndQuans));
+	}
+	
+	@Test
+	public void priceForTwoDifferentBooks() {
+		Map<String, Integer> booksAndQuans = new HashMap<>();
+		booksAndQuans.put("Clean Code (Robert Martin, 2008)", 1);
+		booksAndQuans.put("The Clean Coder (Robert Martin, 2011)", 1);
+		assertEquals(95, developmentBooks.finalPrice(booksAndQuans));
+	}
+	
+	@Test
+	public void priceForThreeDifferentBooks() {
+		Map<String, Integer> booksAndQuans = new HashMap<>();
+		booksAndQuans.put("Clean Code (Robert Martin, 2008)", 1);
+		booksAndQuans.put("The Clean Coder (Robert Martin, 2011)", 1);
+		booksAndQuans.put("Clean Architecture (Robert Martin, 2017)", 1);
+		assertEquals(135, developmentBooks.finalPrice(booksAndQuans));
+	}
+	
+	@Test
+	public void priceForFourDifferentBooks() {
+		Map<String, Integer> booksAndQuans = new HashMap<>();
+		booksAndQuans.put("Clean Code (Robert Martin, 2008)", 1);
+		booksAndQuans.put("The Clean Coder (Robert Martin, 2011)", 1);
+		booksAndQuans.put("Clean Architecture (Robert Martin, 2017)", 1);
+		booksAndQuans.put("Test Driven Development by Example (Kent Beck, 2003)", 1);
+		assertEquals(160, developmentBooks.finalPrice(booksAndQuans));
+	}
+	
+	@Test
+	public void priceForFiveDifferentBooks() {
+		Map<String, Integer> booksAndQuans = new HashMap<>();
+		booksAndQuans.put("Clean Code (Robert Martin, 2008)", 1);
+		booksAndQuans.put("The Clean Coder (Robert Martin, 2011)", 1);
+		booksAndQuans.put("Clean Architecture (Robert Martin, 2017)", 1);
+		booksAndQuans.put("Test Driven Development by Example (Kent Beck, 2003)", 1);
+		booksAndQuans.put("Working Effectively With Legacy Code (Michael C. Feathers, 2004)", 1);
+		assertEquals(187.5, developmentBooks.finalPrice(booksAndQuans));
+	}
+	
+	@Test
+	public void priceForThreeDifferentAndOneSameBooks() {
+		Map<String, Integer> booksAndQuans = new HashMap<>();
+		booksAndQuans.put("Clean Code (Robert Martin, 2008)", 1);
+		booksAndQuans.put("The Clean Coder (Robert Martin, 2011)", 1);
+		booksAndQuans.put("Clean Architecture (Robert Martin, 2017)", 2);
+		assertEquals(185, developmentBooks.finalPrice(booksAndQuans));
+	}
+	
+	@Test
+	public void priceForAnotherCombo() {
+		Map<String, Integer> booksAndQuans = new HashMap<>();
+		booksAndQuans.put("Clean Code (Robert Martin, 2008)", 2);
+		booksAndQuans.put("The Clean Coder (Robert Martin, 2011)", 2);
+		booksAndQuans.put("Clean Architecture (Robert Martin, 2017)", 2);
+		booksAndQuans.put("Test Driven Development by Example (Kent Beck, 2003)", 1);
+		booksAndQuans.put("Working Effectively With Legacy Code (Michael C. Feathers, 2004)", 1);
+		assertEquals(320, developmentBooks.finalPrice(booksAndQuans));
+	}
+}
