@@ -1,0 +1,40 @@
+package com.bnpp.kata;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
+
+@TestInstance(Lifecycle.PER_CLASS)
+public class LeapYearsTest {
+	
+	private LeapYears leapYears;
+	
+	@BeforeAll
+	public void setup() {
+		leapYears = new LeapYears();
+	}
+
+	@Test
+	public void yearDivBy400() {
+		assertTrue(leapYears.isLeapYear(2000));
+	}
+	
+	@Test
+	public void yearDivBy100AndNotBy400() {
+		assertFalse(leapYears.isLeapYear(1800));
+	}
+	
+	@Test
+	public void yearDivBy4AndNotBy100() {
+		assertTrue(leapYears.isLeapYear(2008));
+	}
+	
+	@Test
+	public void yearDivNotBy4() {
+		assertFalse(leapYears.isLeapYear(2017));
+	}
+}
