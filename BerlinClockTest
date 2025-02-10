@@ -1,0 +1,29 @@
+package com.bnpp.kata;
+
+import java.time.LocalTime;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
+
+@TestInstance(Lifecycle.PER_CLASS)
+public class BerlinClockTest {
+	
+	private BerlinClock berlinClock;
+
+	@BeforeAll
+	public void setup() {
+		berlinClock = new BerlinClock();
+	}
+	
+	@Test
+	public void checkEighteenThirtyFive() {
+		berlinClock.illuminationSeries(LocalTime.of(18, 35));
+	}
+	
+	@Test
+	public void checkOneSixteen() {
+		berlinClock.illuminationSeries(LocalTime.of(01, 16));
+	}
+}
