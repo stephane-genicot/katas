@@ -1,0 +1,67 @@
+package com.bnpp.kata;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
+
+@TestInstance(Lifecycle.PER_CLASS)
+public class TicTacToeTest {
+	
+	private TicTacToe ticTacToe;
+
+	@BeforeEach
+	public void setup() {
+		ticTacToe = new TicTacToe();
+	}
+	
+	@Test
+	public void isPositionAvailable() {
+		assertTrue(ticTacToe.positionAvailable(5));
+	}
+	
+	@Test
+	public void samePositionException() throws Exception {
+		assertEquals("Game is still going on", ticTacToe.play(2));
+		try {
+			ticTacToe.play(2);
+		} catch (Exception ex) {
+			assertEquals("Position is not available or not allowed", ex.getMessage());
+		}
+	}
+	
+	@Test
+	public void XwinsTheGameDiagnoally() throws Exception {
+		assertEquals("Game is still going on", ticTacToe.play(2));
+		assertEquals("Game is still going on", ticTacToe.play(5));
+		assertEquals("Game is still going on", ticTacToe.play(4));
+		assertEquals("Game is still going on", ticTacToe.play(1));
+		assertEquals("X won the game", ticTacToe.play(6));
+	}
+	
+	@Test
+	public void OwinsTheGameHorizontally() throws Exception {
+		assertEquals("Game is still going on", ticTacToe.play(1));
+		assertEquals("Game is still going on", ticTacToe.play(6));
+		assertEquals("Game is still going on", ticTacToe.play(4));
+		assertEquals("Game is still going on", ticTacToe.play(7));
+		assertEquals("Game is still going on", ticTacToe.play(5));
+		assertEquals("O won the game", ticTacToe.play(8));
+	}
+	
+	@Test
+	public void gameIsDraw() throws Exception {
+		assertEquals("Game is still going on", ticTacToe.play(1));
+		assertEquals("Game is still going on", ticTacToe.play(0));
+		assertEquals("Game is still going on", ticTacToe.play(3));
+		assertEquals("Game is still going on", ticTacToe.play(4));
+		assertEquals("Game is still going on", ticTacToe.play(8));
+		assertEquals("Game is still going on", ticTacToe.play(7));
+		assertEquals("Game is still going on", ticTacToe.play(6));
+		assertEquals("Game is still going on", ticTacToe.play(2));
+		assertEquals("Game is draw", ticTacToe.play(5));
+	}
+}
