@@ -1,0 +1,56 @@
+package com.bnpp.kata;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class TennisTest {
+	
+	private Tennis tennis;
+	
+	@BeforeEach
+	public void setup() {
+		tennis = new Tennis();
+	}
+	
+	@Test
+	public void initialScore() {
+		assertEquals("Player1: love Player2: love", tennis.gameResult());
+	}
+	
+	@Test
+	public void player1Won() {
+		tennis.setPlayer1Score(4);
+		assertEquals("Player 1 won the game", tennis.gameResult());
+	}
+	
+	@Test
+	public void player2Won() {
+		tennis.setPlayer1Score(2);
+		tennis.setPlayer2Score(4);
+		assertEquals("Player 2 won the game", tennis.gameResult());
+	}
+	
+	@Test
+	public void deuceTest() {
+		tennis.setPlayer1Score(3);
+		tennis.setPlayer2Score(3);
+		assertEquals("Deuce", tennis.gameResult());
+	}
+	
+	@Test
+	public void advForPlayer1() {
+		tennis.setPlayer1Score(4);
+		tennis.setPlayer2Score(3);
+		assertEquals("Advantage for Player 1", tennis.gameResult());
+	}
+	
+	@Test
+	public void advForPlayer2() {
+		tennis.setPlayer1Score(3);
+		tennis.setPlayer2Score(4);
+		assertEquals("Advantage for Player 2", tennis.gameResult());
+	}
+
+}
