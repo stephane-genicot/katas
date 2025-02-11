@@ -1,0 +1,45 @@
+package com.bnpp.kata;
+
+public class Tennis {
+	
+	private int player1Score, player2Score = 0;
+	
+	public void setPlayer1Score(int player1Score) {
+		this.player1Score = player1Score;
+	}
+
+	public void setPlayer2Score(int player2Score) {
+		this.player2Score = player2Score;
+	}
+
+	private boolean winner() {
+        return player1Score >= 4 && player1Score - player2Score >= 2 ||
+        		player2Score >= 4 && player2Score - player1Score >= 2;
+    }
+	
+	private String scoreResult(int points) {
+        switch (points) {
+            case 0: return "love";
+            case 1: return "fifteen";
+            case 2: return "thirty";
+            case 3: return "forty";
+            default: return "";
+        }
+    }
+	
+	public String gameResult() {
+		if(winner())
+			return player1Score > player2Score ? "Player 1 won the game" : "Player 2 won the game";
+		else if (player1Score >=3 && player2Score >= 3){
+			if(player1Score == player2Score)
+				return "Deuce";
+			else if (player1Score > player2Score)
+				return "Advantage for Player 1";
+			else if (player2Score > player1Score)
+				return "Advantage for Player 2";
+		}
+		
+		return "Player1: "+scoreResult(player1Score)+" Player2: "+scoreResult(player2Score);
+	}
+
+}
