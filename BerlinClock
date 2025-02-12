@@ -1,0 +1,51 @@
+
+public class BerlinClock {
+	
+	private String checkSeconds(int seconds) {
+		return (seconds%2 ==0)?"Y":"0";
+	}
+	
+	private String checkHours(int hours) {
+		StringBuilder sb = new StringBuilder();
+		int evenHours = hours/5;
+		for(int i=0;i<4;i++) {
+			sb.append((i<evenHours)?"R":"0");
+		}
+		sb.append("\n");
+		
+		int oddHours = hours%5;
+		for(int i=0;i<4;i++) {
+			sb.append((i<oddHours)?"R":"0");
+		}
+		return sb.toString();
+	}
+	
+	private String checkMinutes(int minutes) {
+		StringBuilder sb = new StringBuilder();
+		int evenHours = minutes/5;
+		for(int i=0;i<4;i++) {
+			sb.append((i<evenHours)?"Y":"0");
+		}
+		sb.append("\n");
+		
+		int oddHours = minutes%5;
+		for(int i=0;i<4;i++) {
+			sb.append((i<oddHours)?"Y":"0");
+		}
+		return sb.toString();
+	}
+	
+	public String getTime(String time) {
+		String[] parts = time.split(":");
+		int hour= Integer.parseInt(parts[0]);
+		int min= Integer.parseInt(parts[1]);
+		int sec= Integer.parseInt(parts[2]);
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append(checkSeconds(sec));
+		sb.append(checkMinutes(min));
+		sb.append(checkHours(hour));
+		return sb.toString();
+	}
+
+}
