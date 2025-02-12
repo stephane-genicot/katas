@@ -1,0 +1,77 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.example.assignment.tennis.Tennis;
+
+public class TennisTest {
+	Tennis tennis ;
+	@BeforeEach
+	public void initiate() {
+		tennis = new Tennis();
+	}
+
+	@Test
+	public void testLove() {
+		assertEquals("love - love", tennis.getScore());
+	}
+	
+	@Test
+	public void testFifteen() {
+		tennis.firstPlayerScore();
+		assertEquals("fifteen - love", tennis.getScore());
+	}
+	
+	@Test
+	public void testThirty() {
+		tennis.firstPlayerScore();
+		tennis.firstPlayerScore();
+		assertEquals("thirty - love", tennis.getScore());
+	}
+	
+	@Test
+	public void testForty() {
+		tennis.firstPlayerScore();
+		tennis.firstPlayerScore();
+		tennis.firstPlayerScore();
+		assertEquals("forty - love", tennis.getScore());
+	}
+	
+	@Test
+	public void testAdvantageOne() {
+		tennis.firstPlayerScore();
+		tennis.firstPlayerScore();
+		tennis.firstPlayerScore();
+		tennis.firstPlayerScore();
+		tennis.secondPlayerScore();
+		tennis.secondPlayerScore();
+		tennis.secondPlayerScore();
+		assertEquals("advantage Player One", tennis.getScore());
+	}
+	
+	@Test
+	public void testAdvantageTwo() {
+		tennis.firstPlayerScore();
+		tennis.firstPlayerScore();
+		tennis.firstPlayerScore();
+		tennis.secondPlayerScore();
+		tennis.secondPlayerScore();
+		tennis.secondPlayerScore();
+		tennis.secondPlayerScore();
+		assertEquals("advantage Player Two", tennis.getScore());
+	}
+	
+	@Test
+	public void testDeuce() {
+		tennis.firstPlayerScore();
+		tennis.firstPlayerScore();
+		tennis.secondPlayerScore();
+		tennis.firstPlayerScore();
+		tennis.secondPlayerScore();
+		tennis.secondPlayerScore();
+		assertEquals("deuce", tennis.getScore());
+	}
+}
+
+
