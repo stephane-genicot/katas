@@ -1,0 +1,21 @@
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
+import org.junit.Test;
+
+import com.example.assignment.leapYear.LeapYear;
+
+
+public class LeapYearTest {
+	
+	@Test
+	public void checkLeapYearTest() {
+		
+		assertTrue(LeapYear.checkLeapYear(2000));
+		assertFalse(LeapYear.checkLeapYear(1700));
+		assertFalse(LeapYear.checkLeapYear(1900));
+		assertTrue(LeapYear.checkLeapYear(2008));
+		assertFalse(LeapYear.checkLeapYear(2019));
+	}
+
+}
