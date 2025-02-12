@@ -1,0 +1,20 @@
+public class BerlinClockTest {
+	
+	BerlinClock berlinClock = new BerlinClock();
+
+@Test
+public void testNight() {
+	assertEquals("00000\nY0000000\n0000", berlinClock.getTime("00:01:35"));
+}
+
+@Test
+public void testNoon() {
+	assertEquals("Y0000\nY000RR00\nRRR0", berlinClock.getTime("13:01:40"));
+}
+
+@Test
+public void testTime() {
+	assertEquals("Y0000\n0000RRR0\nRRR0", berlinClock.getTime("18:00:00"));
+}
+
+}
