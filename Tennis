@@ -1,0 +1,78 @@
+public class Tennis {
+	private int firstPlayerScore;
+	private int secondPlayerScore;
+	
+	public void firstPlayerScore() {
+		firstPlayerScore++;
+	}
+	
+	public void secondPlayerScore() {
+		secondPlayerScore++;
+	}
+	
+	public String getScore() {
+		if(deuce()) {
+			return "deuce";
+		}
+		else if(advantageOne()) {
+			return "advantage Player One";
+		}
+		else if(advantageTwo()) {
+			return "advantage Player Two";
+		}else {
+			return getScore(firstPlayerScore)+" - "+getScore(secondPlayerScore);
+		}
+	}
+	
+	private boolean deuce() {
+		return firstPlayerScore>=3 && secondPlayerScore>=3 && firstPlayerScore==secondPlayerScore;
+	}
+	
+	private boolean advantageOne() {
+		return firstPlayerScore>=3 && secondPlayerScore>=3 && firstPlayerScore == secondPlayerScore+1;
+	}
+	
+	private boolean advantageTwo() {
+		return firstPlayerScore>=3 && secondPlayerScore>=3 && secondPlayerScore == firstPlayerScore+1;
+	}
+	
+	private String getScore(int score) {
+		switch(score) {
+		case 0:
+			return "love";
+		case 1:
+			return "fifteen";
+		case 2:
+			return "thirty";
+		case 3:
+			return "forty";
+		
+		default:
+			return "";
+	}
+	}
+}
+
+
+public class GameScore {
+	private Tennis tennis;
+	public GameScore() {
+		this.tennis = new Tennis();
+	}
+	public void game() {
+		tennis.firstPlayerScore();
+		//tennis.firstPlayerScore();
+		tennis.secondPlayerScore();
+		//tennis.firstPlayerScore();
+		//tennis.secondPlayerScore();
+		//tennis.secondPlayerScore();
+		
+		System.out.println(tennis.getScore());
+	}
+
+	public static void main(String[] args) {
+		GameScore gameScore = new GameScore();
+		gameScore.game();
+	}
+
+}
