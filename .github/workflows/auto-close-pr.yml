@@ -12,7 +12,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
       - name: Close PR
-        run: gh pr close ${{ github.event.pull_request.html_url }} -r "PRs not allowed & closed"
+        run: gh pr close ${{ github.event.pull_request.html_url }} -c "PRs not allowed & closed"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Delete Branch
