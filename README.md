@@ -12,4 +12,4 @@ You'll find *[here](CleanCode.md)* a summary of 'Clean code' by Robert C. Martin
 
 
 
-Test
+Test autoclose 1
