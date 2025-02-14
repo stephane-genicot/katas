@@ -1,0 +1,52 @@
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.example.assignment.tictactoe.TicTacToe;
+
+public class TicTacToeTest {
+	
+	TicTacToe ticTacToe;
+	@BeforeEach
+	public void initiate() {
+		ticTacToe = new TicTacToe();
+	}
+
+	@Test
+	public void testEmpty() {
+		assertEquals(' ', ticTacToe.winner());
+	}
+	
+	@Test
+	public void testXwins() {
+		ticTacToe.play(0, 0, 'X');
+		ticTacToe.play(0, 1, 'X');
+		ticTacToe.play(0, 2, 'X');
+		assertEquals('X', ticTacToe.winner());
+	}
+	
+	@Test
+	public void test0wins() {
+		ticTacToe.play(0, 0, '0');
+		ticTacToe.play(0, 1, '0');
+		ticTacToe.play(0, 2, '0');
+		assertEquals('0', ticTacToe.winner());
+	}
+	
+	@Test
+	public void testDraw() {
+		ticTacToe.play(0, 0, 'X');
+		ticTacToe.play(0, 1, '0');
+		ticTacToe.play(0, 2, 'X');
+		ticTacToe.play(1, 0, '0');
+		ticTacToe.play(1, 1, 'X');
+		ticTacToe.play(1, 2, '0');
+		ticTacToe.play(2, 0, 'X');
+		ticTacToe.play(2, 1, '0');
+		ticTacToe.play(2, 2, 'X');
+		assertTrue(ticTacToe.drawMatch());
+	}
+
+}
