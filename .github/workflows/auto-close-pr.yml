@@ -15,3 +15,8 @@ jobs:
         run: gh pr close ${{ github.event.pull_request.html_url }} -r "PRs not allowed & closed"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Delete Branch
+        if: github.event.pull_request.head.repo.full_name == github.repository  # Ensures only branches from the same repo are deleted, not forks
+        run: gh api -X DELETE repos/${{ github.repository }}/git/refs/heads/${{ github.event.pull_request.head.ref }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
